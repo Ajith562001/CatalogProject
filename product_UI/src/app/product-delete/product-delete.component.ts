@@ -13,7 +13,7 @@ user= {categoryNo:0}
 
 
 onDelete() {
-  return this.http.delete(`${this.Url}/${this.user}`).subscribe((res) =>
+  return this.http.delete(`${this.Url}/${this.user.categoryNo}`).subscribe((res) =>
    {console.log(res);
     console.log("Deleted");
     alert("Successfully Deleted");
