@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+
+<form (ngSubmit)="onSubmit()">
+    <label for="subCategoryNo">subCategoryNo:</label>
+    <input type="number" id="subCategoryNo" name="subCategoryNo" [(ngModel)]="user.subCategoryNo"><br><br>
+ 
+    <label for="categoryId">categoryId:</label>
+    <input type="number" id="categoryId" name="categoryId" [(ngModel)]="user.categoryId"><br><br>
+  
+
+    <label for="subCategoryName">SubCategoryName:</label>
+    <input type="text" id="subCategoryName" name="subCategoryName" [(ngModel)]="user.subCategoryName"><br><br>
+ 
+    <label for="description">Description:</label>
+   <input type="text" id="description" name="description" [(ngModel)]="user.description"><br><br>
+ 
+  
+    <button type="submit">Submit</button>
+ </form>

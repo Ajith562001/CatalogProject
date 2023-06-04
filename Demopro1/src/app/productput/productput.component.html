@@ -1,0 +1,22 @@
+<app-nav></app-nav>
+
+<form (ngSubmit)="onSubmit()">
+    <label for="productNo">productNo:</label>
+    <input type="number" id="productNo" name="productNo" [(ngModel)]="user.productNo"><br><br>
+ 
+    <label for="categoryId">categoryId:</label>
+    <input type="number" id="subCategoryId" name="subCategoryId" [(ngModel)]="user.subCategoryId"><br><br>
+  
+
+    <label for="brand">brand:</label>
+    <input type="text" id="brand" name="brand" [(ngModel)]="user.brand">
+    <br><br>
+    <label for="price">price:</label>
+    <input type="number" id="price" name="price" [(ngModel)]="user.price">
+    <br><br>
+    <label for="specification">specification:</label>
+   <input type="text" id="specification" name="specification" [(ngModel)]="user.specification"><br><br>
+ 
+  
+    <button type="submit">Submit</button>
+ </form>

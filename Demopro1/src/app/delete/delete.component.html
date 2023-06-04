@@ -1,0 +1,9 @@
+<app-nav></app-nav>
+
+<form (ngSubmit)="onDelete()">
+    <label for="categoryNo">categoryNo:</label>
+    <input type="number" id="categoryNo" name="categoryNo" [(ngModel)]="user.categoryNo">
+    <button type="submit">Submit</button>
+</form>
+
+<!-- <button (click)="(user.categoryNo)">Delete Item</button> -->

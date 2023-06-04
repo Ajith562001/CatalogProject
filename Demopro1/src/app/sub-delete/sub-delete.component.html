@@ -1,0 +1,7 @@
+<app-nav></app-nav>
+
+<form (ngSubmit)="onDelete()">
+    <label for="subCategoryNo">Sub_categoryNo:</label>
+    <input type="number" id="subCategoryNo" name="subCategoryNo" [(ngModel)]="user.subCategoryNo">
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,68 @@
+<app-nav></app-nav>
+
+<br><br>
+<div>
+  <div class="container text-center">
+      <div class="row">
+        <div *ngFor="let i of data" class="col">
+
+          <div class="card cr" style="width: 18rem;">
+              <div class="card-body">
+               <a href="" routerLink="/sub"> <h6 class="card-title" >No : {{i.categoryNo}}</h6></a>
+               <h5 class="card-title">{{i.categoryName}}</h5>
+        
+                <!-- <h6 class="card-subtitle"> &#8377; {{i.price}}</h6> -->
+
+                <!-- <p class="card-text">{{i.description}}</p> -->
+              </div>
+            </div>
+
+        </div>
+       
+      </div>
+    </div>
+</div>
+
+<!-- <span class="border border-danger"><h1>hiii</h1></span> -->
+<!-- <div class="container overflow-hidden text-center">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-3 " ><table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Product categoryName</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <tr  *ngFor="let product of data" style="font-style: italic;">
+             {{ product.categoryName }} </tr>
+         
+        
+      </tbody>
+    </table>
+    </div>
+    </div>
+   
+  </div>
+</div> -->
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" style="color: rgb(252, 252, 252);" data-bs-toggle="dropdown" aria-expanded="false">
+    EDIT
+  </button>
+  <ul class="dropdown-menu">
+
+     <li><a class="dropdown-item" routerLink="/post">Add New Catagory</a></li>
+    <li><a class="dropdown-item" routerLink="/delete">Delete Catagory</a></li>
+  </ul>
+</div>
+
+
+    
+<!-- <span class="border"><p>ghj</p></span>
+<span class="border-top"><p>cdc</p></span>
+<span class="border-end"><p>cc</p></span>
+<span class="border-bottom"><p>hsinys</p></span>
+<span class="border-start"><p>in</p></span> -->

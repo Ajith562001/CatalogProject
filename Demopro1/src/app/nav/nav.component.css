@@ -1,0 +1,9 @@
+.co{
+    font-style: italic;
+}
+.dropdown .btn-secondary{
+    background-color: rgb(39, 38, 38);
+}
+.dropdown {
+    padding-left: 80%;
+}
