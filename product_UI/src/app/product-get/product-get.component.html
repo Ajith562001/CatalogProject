@@ -1,4 +1,6 @@
 <app-nav></app-nav>
+<h4 style="font-style: italic;" >Product Brands</h4>
+
 <br><br>
 
 
@@ -10,11 +12,11 @@
             <div class="card cr" style="width: 11rem;">
                 <div class="card-body">
                   <h6 class="card-title" >No : {{i.productNo}}</h6>
-                  <h5 class="card-title">{{i.brand}}  &#8377; {{i.price}}</h5>
+                  <h5 class="card-title">{{i.brand}}</h5>
           
-                  <!-- <h6 class="card-subtitle"> &#8377; {{i.price}}</h6> -->
+                  <h6 class="card-subtitle"> &#8377; {{i.price}}</h6>
 
-                  <p class="card-text">{{i.specification}}</p>
+                  <p class="card-text">{{i.specification}}</p><br>
                 </div>
               </div>
 
@@ -24,7 +26,7 @@
       </div>
 </div>
 
-<div class="dropdown">
+<div class="dropdown oo">
   <button class="btn btn-secondary dropdown-toggle" type="button" style="color: rgb(252, 252, 252);" data-bs-toggle="dropdown" aria-expanded="false">
     EDIT
   </button>
@@ -34,4 +36,4 @@
      <li><a class="dropdown-item" routerLink="/productput">Update Catagory</a></li>
     <li><a class="dropdown-item" routerLink="/productDelete">Delete Catagory</a></li>
   </ul>
-</div>
+</div><br><br>

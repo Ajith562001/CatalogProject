@@ -29,7 +29,7 @@ public partial class CatalogContext : DbContext
     {
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryNo).HasName("PK__Category__D54E026359B10436");
+            entity.HasKey(e => e.CategoryNo).HasName("PK__Category__D54E0263B4BC1B46");
 
             entity.ToTable("Category");
 
@@ -43,7 +43,7 @@ public partial class CatalogContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductNo).HasName("PK__Product__47029D624602C49E");
+            entity.HasKey(e => e.ProductNo).HasName("PK__Product__47029D62E247704F");
 
             entity.ToTable("Product");
 
@@ -61,12 +61,13 @@ public partial class CatalogContext : DbContext
 
             //entity.HasOne(d => d.SubCategory).WithMany(p => p.Products)
             //    .HasForeignKey(d => d.SubCategoryId)
-            //    .HasConstraintName("FK__Product__SubCate__5DCAEF64");
+            //    .OnDelete(DeleteBehavior.Cascade)
+            //    .HasConstraintName("FK__Product__SubCate__74AE54BC");
         });
 
         modelBuilder.Entity<SubCategory>(entity =>
         {
-            entity.HasKey(e => e.SubCategoryNo).HasName("PK__SubCateg__830F9A97EDF43211");
+            entity.HasKey(e => e.SubCategoryNo).HasName("PK__SubCateg__830F9A975194C775");
 
             entity.ToTable("SubCategory");
 
@@ -81,7 +82,8 @@ public partial class CatalogContext : DbContext
 
             //entity.HasOne(d => d.Category).WithMany(p => p.SubCategories)
             //    .HasForeignKey(d => d.CategoryId)
-            //    .HasConstraintName("FK__SubCatego__categ__5AEE82B9");
+            //    .OnDelete(DeleteBehavior.Cascade)
+            //    .HasConstraintName("FK__SubCatego__categ__71D1E811");
         });
 
         OnModelCreatingPartial(modelBuilder);

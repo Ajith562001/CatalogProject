@@ -1,22 +1,23 @@
 <app-nav></app-nav>
-<h4>Add New category</h4>
+<h4 style="font-style: italic;">Add New category</h4>
 <br>
-
+<div class="ii">
  <form (ngSubmit)="onSubmit()">
        <label for="categoryNo">categoryNo:</label>
        <input type="number" id="categoryNo" name="categoryNo" [(ngModel)]="user.categoryNo"><br><br>
     
        <label for="categoryName">categoryName:</label>
       <input type="text" id="categoryName" name="categoryName" [(ngModel)]="user.categoryName">
-    
+      <br><br>
+
        <button type="submit">Submit</button>
     </form>
-
+   </div>
     <br><br>
-<h4>Add New Sub-Category</h4>
+<h4 style="font-style: italic;">Add New Sub-Category</h4>
 <br>
-
-<form (ngSubmit)="oSubmit()">
+<div class="ii">
+   <form (ngSubmit)="oSubmit()">
     <label for="subCategoryNo">subCategoryNo:</label>
     <input type="number" id="subCategoryNo" name="subCategoryNo" [(ngModel)]="user1.subCategoryNo"><br><br>
  
@@ -28,12 +29,14 @@
 
    <label for="description">description:</label>
    <input type="text" id="description" name="description" [(ngModel)]="user1.description">
- 
+ <br><br>
 
     <button type="submit">Submit</button>
- </form>
+ </form><br><br></div>
 
-<h4>Add New Product</h4><br>
+<h4 style="font-style: italic;">Add New Product</h4><br>
+<div class="ii">
+
  <form (ngSubmit)="Submit()">
     <label for="productNo">productNo:</label>
     <input type="number" id="productNo" name="productNo" [(ngModel)]="user2.productNo"><br><br>
@@ -50,10 +53,11 @@
    <label for="specification">specification:</label>
    <input type="text" id="specification" name="specification" [(ngModel)]="user2.specification">
  
+   <br><br>
 
     <button type="submit">Submit</button>
  </form> 
-
+</div>
 <br><br>
 
 

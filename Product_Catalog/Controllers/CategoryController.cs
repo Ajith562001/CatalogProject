@@ -10,7 +10,9 @@ namespace Product_Catalog.Controllers
         [HttpGet("GetAll")]
         public ActionResult<Entity.Category> GetAllCategories()
         {
+
             Entity.CatalogContext entity = new Entity.CatalogContext();
+            try { 
             var data = (from a in entity.Categories
                      select a).ToList();
 
@@ -20,36 +22,45 @@ namespace Product_Catalog.Controllers
             }
             return Ok(data);
         }
+            catch
+            {
+                return BadRequest();
+    }
+}
 
         [HttpPost("Add")]
         public ActionResult<Entity.Category> AddCategories([FromBody] Entity.Category entity)
         {
             Entity.CatalogContext context = new Entity.CatalogContext();
-
+           
+            try { 
             context.Categories.Add(entity);
             context.SaveChanges();
             return Ok();
-        }
+               }
+            catch
+            {
+                return BadRequest();
+             }
+}
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            if(id == 1) 
-            {
-                return BadRequest();
-            }
+           
 
             Entity.CatalogContext context = new Entity.CatalogContext();
+            
+                var data = context.Categories.Find(id);
 
-            var data = context.Categories.Find(id);
+                if (data == null)
+                {
+                    return NotFound();
+                }
 
-            if(data == null)
-            {
-                return NotFound();
-            }
-
-            context.Categories.Remove(data);
-            context.SaveChanges();
-            return Ok();
+                context.Categories.Remove(data);
+                context.SaveChanges();
+                return Ok();
+           
         }
 
 

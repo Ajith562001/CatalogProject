@@ -1,7 +1,9 @@
 <app-nav></app-nav>
-
+<h4 style="font-style: italic;">Delete Product</h4>
+<br>
+<div class="ii">
 <form (ngSubmit)="onDelete()">
     <label for="categoryNo"><h6>Product No :</h6></label>
-    <input type="number" id="categoryNo" name="categoryNo" [(ngModel)]="user.categoryNo">
+    <input type="number" id="categoryNo" name="categoryNo" [(ngModel)]="user.categoryNo"><br><br>
     <button type="submit">Submit</button>
-</form>
+</form></div>

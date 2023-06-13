@@ -61,11 +61,6 @@ namespace Product_Catalog.Controllers
         [HttpDelete("{No:int}")]
         public ActionResult Delete(int No)
         {
-            if (No == 0)
-            {
-                return BadRequest();
-            }
-
             Entity.CatalogContext context = new Entity.CatalogContext();
 
             var data = context.SubCategories.Find(No);

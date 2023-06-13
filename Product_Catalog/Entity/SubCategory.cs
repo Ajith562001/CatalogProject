@@ -13,5 +13,5 @@ public partial class SubCategory
 
     public string? Description { get; set; }
 
-
+ 
 }
