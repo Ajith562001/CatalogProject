@@ -24,4 +24,11 @@ jobs:
       run: dotnet restore Product_Catalog/Product_Catalog.csproj
     - name: Build
       run: dotnet build Product_Catalog/Product_Catalog.csproj --no-restore
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v2.1.1
+      with:
+        # Artifact name
+        name: myartifact
+        # Destination path
+        path: Product_Catalog
 
