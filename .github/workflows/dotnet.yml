@@ -32,5 +32,5 @@ jobs:
         # Artifact name
         name: myartifact
         # Destination path
-        path: Product_Catalog
+        path: Product_Catalog/Product_Catalog.csproj
 
