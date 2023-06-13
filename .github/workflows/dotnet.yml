@@ -24,6 +24,8 @@ jobs:
       run: dotnet restore Product_Catalog/Product_Catalog.csproj
     - name: Build
       run: dotnet build Product_Catalog/Product_Catalog.csproj --no-restore
+    - name: Publish
+      run: dotnet publish Product_Catalog/Product_Catalog.csproj -c Release -o myartifact 
     - name: Download a Build Artifact
       uses: actions/download-artifact@v2.1.1
       with:
