@@ -17,6 +17,7 @@ namespace Product_Catalog.Tests
         {
             _controller = new CategoryController();
         }
+//this is an update
 
         //[Test]
         //public void GetAllCategories_WhenCalled_ReturnsAllCategories()
